@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SelvaraOS</title>
+<meta name="description" content="SelvaraOS is a free, private desktop operating system: smooth on older PCs and easy for everyone.">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; font-src 'self'; script-src 'none'; base-uri 'self'; form-action 'none'">
+<meta property="og:title" content="SelvaraOS">
+<meta property="og:description" content="SelvaraOS is a free, private desktop operating system: smooth on older PCs and easy for everyone.">
+<meta property="og:image" content="assets/img/og.png">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/interdisplay-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="SelvaraOS home"><svg viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="70" fill="none" stroke="#2FAE85" stroke-width="10" stroke-linecap="round" stroke-dasharray="380 60" transform="rotate(-30 100 100)"/><circle cx="100" cy="100" r="52" fill="none" stroke="#2FAE85" stroke-width="10" stroke-linecap="round" stroke-dasharray="280 47" opacity="0.8" transform="rotate(60 100 100)"/><circle cx="100" cy="100" r="34" fill="none" stroke="#2FAE85" stroke-width="10" stroke-linecap="round" stroke-dasharray="180 34" opacity="0.6" transform="rotate(150 100 100)"/><circle class="core" cx="100" cy="100" r="12" fill="#8FD6B4"/></svg><span class="word">Selvara<span class="os">OS</span></span></a>
+    <div class="head-right"><nav class="nav" aria-label="Main"><a href="features.html">Features</a><a href="privacy.html">Privacy</a><a href="download.html">Download</a><a href="faq.html">FAQ</a></nav><div class="head-btns"><a class="btn btn-quiet btn-sm" href="https://github.com/selvara-os" rel="noopener">GitHub</a><a class="btn btn-primary btn-sm" href="https://discord.gg/3zVqjyQsq6" rel="noopener">Discord</a></div></div>
+  </div>
+</header>
+<main id="main">
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <h1>A computer that minds its own business.</h1>
+        <p class="lead">SelvaraOS is a free desktop operating system for PCs. It collects nothing, stays smooth on older hardware, and is easy to use even if you have never touched Linux.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="features.html">See the features</a>
+          <a class="btn btn-quiet" href="privacy.html">Read the privacy promise</a>
+        </div>
+        <p class="status">In development. The first release ships when it's ready.</p>
+      </div>
+      <svg class="rings" viewBox="0 0 200 200" aria-hidden="true"><g class="ring r1"><circle cx="100" cy="100" r="70" fill="none" stroke="#2FAE85" stroke-width="10" stroke-linecap="round" stroke-dasharray="380 60" transform="rotate(-30 100 100)"/></g><g class="ring r2"><circle cx="100" cy="100" r="52" fill="none" stroke="#2FAE85" stroke-width="10" stroke-linecap="round" stroke-dasharray="280 47" opacity="0.8" transform="rotate(60 100 100)"/></g><g class="ring r3"><circle cx="100" cy="100" r="34" fill="none" stroke="#2FAE85" stroke-width="10" stroke-linecap="round" stroke-dasharray="180 34" opacity="0.6" transform="rotate(150 100 100)"/></g><circle class="core" cx="100" cy="100" r="12" fill="#8FD6B4"/></svg>
+    </div>
+    <figure class="hero-shot">
+      <div class="frame"><img src="assets/img/shot-settings.webp" width="1600" height="918" alt="The SelvaraOS desktop with the Settings app open on the Appearance page, the top bar above and the dock below"></div>
+      <figcaption>Settings in a development build: light or dark, accent colour and how much glass you want.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap split">
+    <div class="head">
+      <h2>Measured on every build.</h2>
+      <p class="lead">Each build of SelvaraOS goes through automated tests that record all network traffic and time the desktop. These are the current results.</p>
+    </div>
+    <div class="report-wrap">
+<p class="fine">Development build, 12 November 2026</p>
+<table class="report" aria-label="Test results of the development build of 12 November 2026">
+<tr><th scope="row">Outgoing connections during start-up, login and five minutes at rest</th><td>0</td></tr>
+<tr><th scope="row">Login to a ready desktop</th><td>3.7 s</td></tr>
+<tr><th scope="row">Memory in use at rest</th><td>1.06 GB</td></tr>
+<tr><th scope="row">Processor use at rest</th><td>0.3%</td></tr>
+</table>
+<p class="fine">Test machine: 4 GB of memory, 2 processor cores, no graphics acceleration.</p>
+</div>
+  </div>
+</section>
+
+<section class="band rule">
+  <div class="wrap">
+    <div class="head">
+      <h2>Six rules decide every detail.</h2>
+    </div>
+    <dl class="terms"><div><dt>Private by design</dt><dd>No telemetry, no accounts, no ads. Nothing connects to the internet unless you ask, and every build is tested for it.</dd></div><div><dt>Smooth on older PCs</dt><dd>Built for computers with 4 GB of memory. Speed comes from careful engineering, and no effect is switched off to fake it.</dd></div><div><dt>Easy from the first minute</dt><dd>Install apps, update, set up Wi-Fi and printers without opening a terminal. Plain words throughout.</dd></div><div><dt>Familiar if you come from a Mac</dt><dd>A top bar, a dock, one search for everything and the keyboard shortcuts you already know.</dd></div><div><dt>Secure from the start</dt><dd>Sandboxed apps, a firewall that blocks incoming connections and no services listening on your network.</dd></div><div><dt>The same everywhere</dt><dd>One design and one vocabulary in every app, dialog and settings page.</dd></div></dl>
+  </div>
+</section>
+
+<section class="band rule">
+  <div class="wrap">
+    <div class="head">
+      <h2>A desktop of its own.</h2>
+      <p class="lead">The top bar, dock, search, settings and notifications are written from scratch for SelvaraOS and run on the KWin compositor.</p>
+    </div>
+    <div class="tour">
+      <div class="tour-main">
+        <div class="txt"><h3>One search for everything</h3><p class="muted">Apps, files, settings and quick sums. Press Super and Space, then start typing.</p></div>
+        <div class="frame"><img src="assets/img/shot-search.webp" width="1600" height="908" alt="Search open on the desktop, listing apps and settings pages that match the letters s, e, t"></div>
+      </div>
+      <div class="pair">
+        <figure><div class="frame"><img src="assets/img/shot-notifications.webp" width="622" height="306" alt="A notification banner under the top bar"></div><figcaption><strong>Notifications that stay out of the way.</strong> A banner in the corner, the full history one click away.</figcaption></figure>
+        <figure><div class="frame"><img src="assets/img/shot-bootmenu.webp" width="760" height="590" alt="The start-up menu with SelvaraOS, Recovery mode and Other versions"></div><figcaption><strong>Polished from the first second.</strong> No scrolling text at start-up, and a start-up menu that appears only when you ask for it.</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band rule">
+  <div class="wrap">
+    <input class="vh" type="radio" name="wp" id="wp-dark" checked>
+    <input class="vh" type="radio" name="wp" id="wp-light">
+    <div class="walls-head">
+      <div class="head">
+        <h2>Six wallpapers, each in dark and light.</h2>
+        <p class="lead">They follow your theme automatically.</p>
+      </div>
+      <div class="seg"><label for="wp-dark">Dark</label><label for="wp-light">Light</label></div>
+    </div>
+    <div class="walls"><figure><div class="wp"><img class="d" src="assets/img/wp-nucleo-dark-sm.webp" width="640" height="360" alt="Nucleo wallpaper, dark version"><img class="l" src="assets/img/wp-nucleo-light-sm.webp" width="640" height="360" alt="Nucleo wallpaper, light version"></div><figcaption>Nucleo</figcaption></figure><figure><div class="wp"><img class="d" src="assets/img/wp-vetro-dark-sm.webp" width="640" height="360" alt="Vetro wallpaper, dark version"><img class="l" src="assets/img/wp-vetro-light-sm.webp" width="640" height="360" alt="Vetro wallpaper, light version"></div><figcaption>Vetro</figcaption></figure><figure><div class="wp"><img class="d" src="assets/img/wp-colline-dark-sm.webp" width="640" height="360" alt="Colline wallpaper, dark version"><img class="l" src="assets/img/wp-colline-light-sm.webp" width="640" height="360" alt="Colline wallpaper, light version"></div><figcaption>Colline</figcaption></figure><figure><div class="wp"><img class="d" src="assets/img/wp-dendro-dark-sm.webp" width="640" height="360" alt="Dendro wallpaper, dark version"><img class="l" src="assets/img/wp-dendro-light-sm.webp" width="640" height="360" alt="Dendro wallpaper, light version"></div><figcaption>Dendro</figcaption></figure><figure><div class="wp"><img class="d" src="assets/img/wp-aurora-dark-sm.webp" width="640" height="360" alt="Aurora wallpaper, dark version"><img class="l" src="assets/img/wp-aurora-light-sm.webp" width="640" height="360" alt="Aurora wallpaper, light version"></div><figcaption>Aurora</figcaption></figure><figure><div class="wp"><img class="d" src="assets/img/wp-grafite-dark-sm.webp" width="640" height="360" alt="Grafite wallpaper, dark version"><img class="l" src="assets/img/wp-grafite-light-sm.webp" width="640" height="360" alt="Grafite wallpaper, light version"></div><figcaption>Grafite</figcaption></figure></div>
+  </div>
+</section>
+
+<section class="band rule">
+  <div class="wrap">
+    <div class="head"><h2>Built on proven ground.</h2></div>
+    <div class="cols">
+      <div><h3>Debian 13</h3><p>The Debian stable base, with security updates until 2030 and thousands of apps.</p></div>
+      <div><h3>KWin on Wayland</h3><p>A modern display system and one of the most mature compositors on Linux, underneath our own desktop.</p></div>
+      <div><h3>Free software</h3><p>Everything we write is published under the GPL-3.0 licence. Read it, change it, share it.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band rule">
+  <div class="wrap closing">
+    <h2>Follow the project.</h2>
+    <p class="lead">SelvaraOS isn't available to download yet. Join the Discord server for news and previews, or follow development on GitHub.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="https://discord.gg/3zVqjyQsq6" rel="noopener">Join the Discord</a>
+      <a class="btn btn-quiet" href="https://github.com/selvara-os" rel="noopener">Open GitHub</a>
+      <a class="btn btn-quiet" href="download.html">See the release plan</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot">
+      <a class="brand" href="index.html" aria-label="SelvaraOS home"><svg viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="70" fill="none" stroke="#2FAE85" stroke-width="10" stroke-linecap="round" stroke-dasharray="380 60" transform="rotate(-30 100 100)"/><circle cx="100" cy="100" r="52" fill="none" stroke="#2FAE85" stroke-width="10" stroke-linecap="round" stroke-dasharray="280 47" opacity="0.8" transform="rotate(60 100 100)"/><circle cx="100" cy="100" r="34" fill="none" stroke="#2FAE85" stroke-width="10" stroke-linecap="round" stroke-dasharray="180 34" opacity="0.6" transform="rotate(150 100 100)"/><circle class="core" cx="100" cy="100" r="12" fill="#8FD6B4"/></svg><span>Selvara<span class="os">OS</span></span></a>
+      <ul class="foot-nav"><li><a href="features.html">Features</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="download.html">Download</a></li><li><a href="faq.html">FAQ</a></li><li><a href="https://github.com/selvara-os" rel="noopener">GitHub</a></li><li><a href="https://discord.gg/3zVqjyQsq6" rel="noopener">Discord</a></li></ul>
+    </div>
+    <div class="foot-note fine">
+      <p>This website sets no cookies, runs no scripts, has no analytics and loads nothing from other servers.</p>
+      <p>SelvaraOS is free software under the GPL-3.0 licence, built on Debian and KDE technologies. Debian is a registered trademark of Software in the Public Interest, Inc. SelvaraOS is an independent project and is not affiliated with Debian, KDE or Apple.</p>
+      <p>Screenshots show development builds and will change.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
