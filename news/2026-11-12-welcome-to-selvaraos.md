@@ -39,13 +39,7 @@ The foundation is in place: the start-up experience, the desktop, Settings, the 
 
 ## Roadmap
 
-These are estimates, and they may move.
-
-- **Dev Beta 1, coming very soon.** The first public build, for testing only. It isn't safe for daily use or important data, and the interface is in English only.
-- **Dev Beta 2, late November.** Selvara Files, the app store, six languages (English, Italian, French, German, Spanish and Dutch) and touchscreen support.
-- **Dev Beta 3, December.** The Migration Assistant, to bring your files over from Windows or another Linux system, plus Network Guard and app permissions.
-- **SelvaraOS 1.0 Canopy, early 2027.** The first stable release.
-- **Apple silicon Macs, maybe.** We'd like to support M1 and M2 Macs after 1.0, but nothing is decided yet.
+The roadmap has been updated since this post. You'll find the current plan, step by step, in [Where SelvaraOS is today, and the road to Canopy 1.0](where-selvaraos-is-today.html).
 
 ## Get involved
 
