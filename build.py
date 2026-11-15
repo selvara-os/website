@@ -707,6 +707,10 @@ css = (SRC / "assets/style.css").read_text()
 css = re.sub(r"/\* tally:start \*/.*?/\* tally:end \*/\n?", "", css, flags=re.S)
 (OUT / "assets/style.css").write_text(css.rstrip() + f"\n/* tally:start */\n{bar_css}/* tally:end */\n")
 
+# hand-made pages: every file in pages/ replaces the generated page of the same name
+if (SRC / "pages").is_dir():
+    shutil.copytree(SRC / "pages", OUT, dirs_exist_ok=True)
+
 # real image dimensions on every page
 for f in OUT.rglob("*.html"):
     s = f.read_text()
