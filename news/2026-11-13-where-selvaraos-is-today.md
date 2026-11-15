@@ -8,6 +8,8 @@ cover_alt: The Aurora wallpaper, dark version
 summary: What already works, what we found testing on real hardware, what Dev Beta 1 will include, and every step from here to SelvaraOS Canopy 1.0.
 ---
 
+**Update, 15 November 2026:** the plan below has changed. There won't be any dev betas: the first public release will be SelvaraOS Canopy Beta 1. [Read what changed and why](straight-to-canopy-beta-1.html).
+
 A lot happened this week. The desktop runs, the first installable image boots and installs, and the first test on a real laptop showed us exactly what still needs work. Here is an honest update on where SelvaraOS stands, and the full roadmap to the first stable release.
 
 ## What already works

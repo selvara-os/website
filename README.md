@@ -30,6 +30,28 @@ If something is wrong (a missing field, a misspelled category, an image that doe
 the build stops and the Actions tab shows a message that says exactly which file and what to fix.
 The live site stays as it was until the error is fixed.
 
+## Adding screenshots
+
+Screenshots live in `screenshots/`, sorted by theme and by the day they were taken:
+
+```
+screenshots/
+  Dark/
+    2026-11-15/
+      01-desktop.png
+      02-launcher.png
+  Light/
+    2026-11-15/
+      01-desktop.png
+```
+
+- Upload with **Add file → Upload files** into the right `Dark/<date>` or `Light/<date>` folder. PNG, JPEG or WebP, any size.
+- The date folder (`YYYY-MM-DD`) is the day the screenshots were taken. It is shown on the page under every screenshot, newest day first.
+- Inside a day they appear in file-name order, so start names with a number: `01-desktop.png`, `02-search.png`.
+- The caption comes from the name: `03-control-center.png` is shown as "Control Center". Use English words separated by dashes.
+- To remove a screenshot, delete its file.
+- Commit, and the Screenshots page updates by itself in about a minute. A wrong folder name or a broken image stops the build with a message that says which file to fix.
+
 ## Building locally
 
 ```

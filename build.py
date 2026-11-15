@@ -18,6 +18,7 @@ OUT = SRC / "_site"
 SITE_URL = "https://selvara-os.github.io/website/"
 GITHUB = "https://github.com/selvara-os"
 DISCORD = "https://discord.gg/3zVqjyQsq6"
+TESTER_FORM = "https://forms.gle/Z6By2JMZiq7L3i2GA"
 BUILD_DATE = "12 November 2026"
 POSTS_PER_PAGE = 10
 CATEGORIES = {"Release": "release", "Announcement": "announcement",
@@ -40,7 +41,7 @@ def rings(cls="", animated=False):
 
 LOGO = rings()
 NAV = [("features.html", "Features"), ("privacy.html", "Privacy"),
-       ("download.html", "Download"), ("news.html", "News"), ("faq.html", "FAQ")]
+       ("screenshots.html", "Screenshots"), ("releases.html", "Releases"), ("news.html", "News"), ("faq.html", "FAQ")]
 
 
 def page(file, title, desc, body, current=None):
@@ -227,13 +228,13 @@ HOME = f"""
           <a class="btn btn-primary" href="features.html">See the features</a>
           <a class="btn btn-quiet" href="privacy.html">Read the privacy promise</a>
         </div>
-        <p class="status">In development. The first release ships when it's ready.</p>
+        <p class="status">In development. Canopy Beta 1 release candidate planned for the second half of December.</p>
       </div>
       {rings("rings", animated=True)}
     </div>
     <figure class="hero-shot">
-      <div class="frame"><img src="assets/img/shot-settings.webp" width="1600" height="919" alt="The SelvaraOS desktop with the Settings app open on the Appearance page, the top bar above and the dock below"></div>
-      <figcaption>Settings in a development build: light or dark, accent colour and how much glass you want.</figcaption>
+      <div class="frame"><img src="assets/img/shot-settings-canopy.webp" width="1600" height="900" alt="The SelvaraOS desktop in dark mode with Selvara Settings open on the General page, the top bar above and the dock below"></div>
+      <figcaption>Selvara Settings in a current development build.</figcaption>
     </figure>
   </div>
 </section>
@@ -312,11 +313,11 @@ HOME = f"""
 <section class="band rule">
   <div class="wrap closing">
     <h2>Follow the project.</h2>
-    <p class="lead">SelvaraOS isn't available to download yet. Join the Discord server for news and previews, or follow development on GitHub.</p>
+    <p class="lead">SelvaraOS isn't available to download yet. Apply as a beta tester to get nightly builds before everyone else, or join the Discord server for news and previews.</p>
     <div class="actions">
-      <a class="btn btn-primary" href="{DISCORD}" rel="noopener">Join the Discord</a>
-      <a class="btn btn-quiet" href="{GITHUB}" rel="noopener">Open GitHub</a>
-      <a class="btn btn-quiet" href="download.html">See the release plan</a>
+      <a class="btn btn-primary" href="{TESTER_FORM}" rel="noopener">Become a beta tester</a>
+      <a class="btn btn-quiet" href="{DISCORD}" rel="noopener">Join the Discord</a>
+      <a class="btn btn-quiet" href="releases.html">See the release plan</a>
     </div>
   </div>
 </section>
@@ -438,25 +439,35 @@ PRIVACY = f"""
 </section>
 """
 
-# ------------------------------------------------------------------ download
-DOWNLOAD = f"""
+# ------------------------------------------------------------------ releases
+RELEASES = f"""
 <section class="wrap page-head">
-  <h1>Not available yet</h1>
-  <p class="lead">SelvaraOS can't be downloaded today. The first release will be published when it is polished, stable and ready for everyday use.</p>
+  <h1>Releases</h1>
+  <p class="lead">Every SelvaraOS release will be listed here, betas included. There isn't one yet: the first will be SelvaraOS Canopy Beta 1, with a release candidate planned for the second half of December.</p>
   <div class="actions">
-    <a class="btn btn-primary" href="{DISCORD}" rel="noopener">Join the Discord</a>
-    <a class="btn btn-quiet" href="{GITHUB}" rel="noopener">Open GitHub</a>
-    <a class="btn btn-quiet" href="features.html">See what works so far</a>
+    <a class="btn btn-primary" href="{TESTER_FORM}" rel="noopener">Become a beta tester</a>
+    <a class="btn btn-quiet" href="{DISCORD}" rel="noopener">Join the Discord</a>
+    <a class="btn btn-quiet" href="news/straight-to-canopy-beta-1.html">Read the latest plan</a>
   </div>
 </section>
 <section class="band rule">
   <div class="wrap">
-    <div class="head"><h2>Release plan</h2></div>
+    <div class="head"><h2>Release plan</h2><p class="lead">Estimates, and they may move.</p></div>
     <ol class="timeline">
-      <li class="now"><span class="when">Now</span><h3>Development builds</h3><p>Internal installer images are built and tested on every change: start-up, performance and privacy checks.</p></li>
-      <li><span class="when">Next</span><h3>SelvaraOS 1.0 Canopy</h3><p>The first public release, for PCs with Intel or AMD processors.</p></li>
-      <li><span class="when">Later</span><h3>Apple Silicon</h3><p>A version for virtual machines on Apple Silicon Macs, then native support for M1 and M2 Macs.</p></li>
+      <li class="now"><span class="when">Soon</span><h3>Nightly builds</h3><p>For approved beta testers. Install once, and a new build arrives every night and installs when you restart.</p></li>
+      <li><span class="when">Late December</span><h3>Canopy Beta 1 release candidate</h3><p>The first build everyone can download, for PCs with Intel or AMD processors.</p></li>
+      <li><span class="when">Next</span><h3>Canopy Beta 1 and Beta 2</h3><p>The release candidate with the last problems fixed, then the final step before stable.</p></li>
+      <li><span class="when">When it's ready</span><h3>SelvaraOS Canopy 1.0</h3><p>The stable release, tested on real hardware by real people.</p></li>
+      <li><span class="when">Later</span><h3>Canopy 1.5</h3><p>Native support for Apple Silicon Macs.</p></li>
     </ol>
+  </div>
+</section>
+<section class="band rule">
+  <div class="wrap">
+    <div class="head"><h2>Become a beta tester</h2><p class="lead">Approved testers get nightly builds before the public betas. They update themselves, and there is never a downgrade: if you leave the nightly channel, your computer stays where it is until the next public beta catches up.</p></div>
+    <div class="actions">
+      <a class="btn btn-primary" href="{TESTER_FORM}" rel="noopener">Apply now</a>
+    </div>
   </div>
 </section>
 <section class="band rule">
@@ -482,6 +493,93 @@ DOWNLOAD = f"""
 </section>
 """
 
+# ------------------------------------------------------------------ screenshots
+# Layout: screenshots/<Dark|Light>/<YYYY-MM-DD>/<NN-name>.<png|jpg|webp>
+# The date folder is the day the screenshots were taken; newest first on the page.
+# Inside a day they are sorted by file name. The caption comes from the name:
+# "03-control-center.png" becomes "Control Center".
+SHOT_EXT = {".png", ".jpg", ".jpeg", ".webp"}
+SHOT_FULL, SHOT_THUMB = 1920, 800
+SHOT_THEMES = ("Dark", "Light")
+MONTHS = ["January", "February", "March", "April", "May", "June", "July",
+          "August", "September", "October", "November", "December"]
+
+
+def shot_caption(stem):
+    words = re.sub(r"^\d+[-_ ]*", "", stem).replace("_", " ").replace("-", " ").split()
+    return html.escape(" ".join(w[:1].upper() + w[1:] for w in words) if words else stem)
+
+
+def shot_date(name, where):
+    m = re.fullmatch(r"(\d{4})-(\d{2})-(\d{2})", name)
+    if not m or not (1 <= int(m.group(2)) <= 12 and 1 <= int(m.group(3)) <= 31):
+        sys.exit(f"{where}: date folders must be named YYYY-MM-DD, like 2026-11-15")
+    y, mo, d = (int(x) for x in m.groups())
+    return f"{d} {MONTHS[mo - 1]} {y}"
+
+
+shot_root = SRC / "screenshots"
+(OUT / "screenshots").mkdir(parents=True, exist_ok=True)
+for f in sorted(shot_root.glob("*")) if shot_root.exists() else []:
+    if f.name.startswith(".") or f.name.lower() == "readme.md":
+        continue
+    if not (f.is_dir() and f.name.lower() in ("dark", "light")):
+        sys.exit(f"screenshots/{f.name}: put screenshots in screenshots/Dark/<date>/ or screenshots/Light/<date>/")
+
+shot_sections, shot_total = [], 0
+for theme in SHOT_THEMES:
+    tdir = next((d for d in shot_root.glob("*") if d.is_dir() and d.name.lower() == theme.lower()), None) if shot_root.exists() else None
+    if tdir is None:
+        continue
+    days = []
+    for ddir in sorted((d for d in tdir.iterdir() if not d.name.startswith(".")), key=lambda d: d.name, reverse=True):
+        where = f"screenshots/{tdir.name}/{ddir.name}"
+        if not ddir.is_dir():
+            sys.exit(f"{where}: put screenshots inside a date folder, like screenshots/{tdir.name}/2026-11-15/")
+        nice = shot_date(ddir.name, where)
+        items = []
+        for f in sorted(ddir.iterdir(), key=lambda x: x.name.lower()):
+            if f.name.startswith(".") or f.suffix.lower() not in SHOT_EXT:
+                continue
+            try:
+                im = Image.open(f)
+                im.load()
+            except Exception:
+                sys.exit(f"{where}/{f.name}: this file can't be opened as an image")
+            im = im.convert("RGB")
+            stem = re.sub(r"[^a-z0-9]+", "-", f.stem.lower()).strip("-") or "screenshot"
+            slug = f"{theme.lower()}-{ddir.name}-{stem}"
+            for width, name in ((SHOT_FULL, f"{slug}.webp"), (SHOT_THUMB, f"{slug}-sm.webp")):
+                out = im if im.width <= width else im.resize((width, round(im.height * width / im.width)), Image.LANCZOS)
+                out.save(OUT / "screenshots" / name, quality=86, method=6)
+            cap = shot_caption(f.stem)
+            items.append(
+                f'<figure><a class="frame" href="screenshots/{slug}.webp">'
+                f'<img src="screenshots/{slug}-sm.webp" alt="{cap}, {theme.lower()} theme, {nice}" loading="lazy"></a>'
+                f'<figcaption>{cap} <span class="shot-date">{nice}</span></figcaption></figure>')
+        if items:
+            shot_total += len(items)
+            days.append(f'<h3 class="shot-day">Taken {nice}</h3><div class="shots">{"".join(items)}</div>')
+    if days:
+        shot_sections.append(f'<section class="band" id="{theme.lower()}"><div class="wrap">'
+                             f'<h2 class="shot-theme">{theme}</h2>{"".join(days)}</div></section>')
+
+shot_jump = " ".join(f'<a class="btn btn-quiet" href="#{t.lower()}">{t}</a>' for t in SHOT_THEMES
+                     if f'id="{t.lower()}"' in "".join(shot_sections))
+SHOTS = f"""
+<section class="wrap page-head">
+  <h1>Screenshots</h1>
+  <p class="lead">SelvaraOS as it looks today, straight from current development builds.</p>
+  <div class="shot-note">
+    <p><strong>SelvaraOS is still changing.</strong> If you see anything unpolished or inconsistent in these screenshots, it's already on my list and will be fixed before Beta 1.</p>
+    <p>If some of them show CachyOS as the host, it's because they were taken while testing the new shell on my main PC, which runs CachyOS.</p>
+  </div>
+  {f'<div class="shot-jump">{shot_jump}</div>' if shot_jump else ''}
+</section>
+{"".join(shot_sections) if shot_total else '<section class="band"><div class="wrap"><p class="lead">No screenshots yet. Check back soon.</p></div></section>'}
+{'<section class="wrap"><p class="fine">Click a screenshot to open it at full size.</p></section>' if shot_total else ''}
+"""
+
 # ------------------------------------------------------------------ faq
 QA = [
     ("Is SelvaraOS free?", "Yes. It is free to download and use, and everything we write is free software under the GPL-3.0 licence."),
@@ -492,8 +590,9 @@ QA = [
     ("Does it collect any data?", "No. There is no telemetry, and nothing connects to the internet unless you ask. An automated test checks this on every build."),
     ("Can I install the apps I use?", "Yes. Thousands of apps are available from Flathub and Debian, and the installer lets you pick popular apps and your browser before you start."),
     ("Can I keep Windows next to it?", "Yes. The installer will let you install SelvaraOS alongside the system you already have."),
-    ("When will it be released?", "When it is ready. Join the Discord server or follow the project on GitHub to hear first."),
-    ("Will it run on a Mac?", "A version for virtual machines on Apple Silicon Macs is planned after 1.0, followed by native support for M1 and M2 Macs."),
+    ("When will it be released?", "The release candidate of SelvaraOS Canopy Beta 1, the first public release, is planned for the second half of December. Approved beta testers get nightly builds before that."),
+    ("How do I become a beta tester?", f'Fill in the <a href="{TESTER_FORM}" rel="noopener">beta tester application</a>. We review every application and email you if you are in.'),
+    ("Will it run on a Mac?", "Native support for Apple Silicon Macs is planned for SelvaraOS Canopy 1.5."),
 ]
 FAQ = f"""
 <section class="wrap page-head"><h1>Questions and answers</h1></section>
@@ -516,8 +615,10 @@ page("features.html", "SelvaraOS features",
      "Everything inside SelvaraOS, with an honest status for each feature.", FEATURES)
 page("privacy.html", "SelvaraOS privacy",
      "No telemetry, nothing connects unless you ask, tested on every build.", PRIVACY)
-page("download.html", "SelvaraOS download",
-     "SelvaraOS release plan and system requirements.", DOWNLOAD)
+page("releases.html", "SelvaraOS releases",
+     "Every SelvaraOS release, the release plan and how to become a beta tester.", RELEASES)
+page("screenshots.html", "SelvaraOS screenshots",
+     "Screenshots of SelvaraOS from current development builds.", SHOTS)
 page("faq.html", "SelvaraOS questions and answers",
      "Frequently asked questions about SelvaraOS.", FAQ)
 page("404.html", "Page not found, SelvaraOS", "This page doesn't exist.", NOTFOUND)
@@ -625,4 +726,9 @@ for f in OUT.rglob("*.html"):
 (OUT / "assets/img/favicon.svg").write_text(
     LOGO.replace('<svg viewBox', '<svg xmlns="http://www.w3.org/2000/svg" viewBox').replace(' aria-hidden="true"', ''))
 (OUT / ".nojekyll").write_text("")
+# old address of the releases page
+(OUT / "download.html").write_text(
+    '<!doctype html><html lang="en"><head><meta charset="utf-8"><title>SelvaraOS releases</title>'
+    '<meta http-equiv="refresh" content="0; url=releases.html"><link rel="canonical" href="'
+    f'{SITE_URL}releases.html"></head><body><p><a href="releases.html">SelvaraOS releases</a></p></body></html>\n')
 print("built", count, f"{len(POSTS)} news posts")
