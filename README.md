@@ -1,6 +1,6 @@
 # SelvaraOS website
 
-Static website for SelvaraOS, published at https://selvara-os.github.io/website/.
+Static website for SelvaraOS, published at https://selvaraos.org/.
 No JavaScript, no cookies, no analytics, nothing loaded from other servers.
 
 ## Writing a news post

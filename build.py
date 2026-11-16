@@ -15,7 +15,7 @@ from PIL import Image
 
 SRC = pathlib.Path(__file__).parent
 OUT = SRC / "_site"
-SITE_URL = "https://selvara-os.github.io/website/"
+SITE_URL = "https://selvaraos.org/"
 GITHUB = "https://github.com/selvara-os"
 DISCORD = "https://discord.gg/3zVqjyQsq6"
 TESTER_FORM = "https://forms.gle/Z6By2JMZiq7L3i2GA"
@@ -46,7 +46,7 @@ NAV = [("features.html", "Features"), ("privacy.html", "Privacy"),
 
 def page(file, title, desc, body, current=None):
     # 404.html is served at any missing address, so it needs absolute paths
-    base = "/website/" if file == "404.html" else "../" * file.count("/")
+    base = "/" if file == "404.html" else "../" * file.count("/")
     current = current or file
     nav = "".join(
         f'<a href="{base}{href}"{" aria-current=\"page\"" if href == current else ""}>{label}</a>'
